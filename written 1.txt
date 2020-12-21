@@ -1,0 +1,59 @@
+1. The Linux Operating System is an open source operating system that consists of 4 parts: the Linux kernel, the GNU utilities, a graphical desktop environment, and application software. 
+
+2. 3 major parts of what makes up the Operating System are the kernel, application software, and window management software. 
+
+3. uname -r
+
+4. Parts of the kernel are system memory management, software program management, hardware management, and filesystem mamagement. 
+
+5. A process is a running program. 
+
+6. Running in the foreground means that the program is displaying output, while on the background means that it is running behind the scenes. 
+
+7. init process
+
+8. true
+
+9. true
+
+10. false, device files
+
+11. Character fiels can only hand data one character at a time. This covers most tyles of modems and terminals. 
+
+12. true
+
+13. network file types
+
+14. nodes
+
+15. Filesystem is a system that controls how data is stored and retrieved. 
+
+16. ext, ext2, ext3
+
+17. GNU stands for GNU's Not Unix. GNU is a complete set of Unix utilities and is open source. Created by Richard Stallman.
+
+18. The shell contains of internal set of commands that are used to control things. It also allowss you to enter commands at the command prompt. 
+
+19. In Linux, X Window software
+
+20. GNOME desktop, Unity desktop
+
+21. Linux Distribution
+
+22. Live CD is a distribution of Linux on a CD, allowing you to boot Linux without installing it. Knoppix, PCLinuxOS, Ubuntu, Slax.
+
+23. Console is an interface to the Linux system.
+
+24. true
+
+25. true
+
+26. Ubuntu uses F7, while RHEL uses F1
+
+27. User ID and password.
+
+28. ps
+
+29. true
+
+30. su

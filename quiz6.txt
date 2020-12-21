@@ -1,0 +1,63 @@
+What do you expect when you execute the following command?
+The command shows the third column for each row. 
+
+Write a cut command to get the name and salary from datafile?
+cut -d: -f1,3 $file
+
+What happens when you execute this command?
+It gets the salary column. 
+
+Get the first five characters of each line in the datafile
+cut -c '1-5'  $file
+
+Write a command using 'tr' to uppercase all names in the file.
+cat names.txt | tr 'a-z' 'A-Z'
+
+Replace all lower case characters in the file with an 'X'.
+cat names.txt | tr '[a-z]' 'X'
+
+Write a sed or other command to mask the salary in the data file so that the output of each line looks like this below
+sed -E 's/\:[0-9][0-9]*\:/\:*****\:/g' $file
+
+Write a command to count the number of lines in the datafile.
+wc -l datafile
+
+Write a command to count the numbers of characters in the datafile.
+wc -m datafile
+
+When you run the below command on datafile, the output seen is listed below. For full credit, explain what is happening in detail as to why you got the output below.
+Line 1 is copied to hold space.
+Line 2 is deleted.
+Line 3 is copied to hold space.
+The two previously copied lines are pasted into Line 4. 
+
+Write a sed command to produce the output below from the datafile. The command will look very similar to number 12. 
+sed '5h;3g;7h;5g;1h;7g' datafile
+
+Write a sed command to split up the datafile so that the first line goes into a file called 'df1', the second and third line will go into a file called 'df2' and the fourth line will go into a file called 'df3'.
+sed '1w df1' $file || sed '2,3w df2' $file || sed '4w df3' $file
+
+Write a sed command to match lines in a file that does not begin with a space or a tab from a file called xfile. To get a space, just hit the space bar. To get a Tab, you should use the Contrl+letter v, then hit the Tab key.
+sed -n '/^[^space tab]/p' xfile
+
+Write a sed command to match lines that begins with a space or a tab
+sed '[^space tab]/p'
+
+Write a sed command to delete lines 1 to 3 in datafile
+sed '1,3d' $file
+
+Write a sed command to delete lines 2 to the end of the datafile.
+sed '2,$d' $file
+
+Given the two files: filea and fileb
+Write a command to show the differences between the two files.
+diff filea fileb
+
+Write a command to show only unique lines in the each file
+uniq filea; uniq fileb
+
+What does the -i option do
+ignore case
+
+What does the -c option do
+prefix lines by number of occurances
