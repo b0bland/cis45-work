@@ -1,0 +1,3 @@
+BOOK=Linux
+COST=60
+echo `date`

@@ -1,0 +1,399 @@
+Script started on Sat 19 Sep 2020 02:47:58 PM EDT
+[cs45aa18@mc-redhat01 lab-3]$ cd ../..
+[cs45aa18@mc-redhat01 homework]$ cd ..
+[cs45aa18@mc-redhat01 ~]$ umask
+0002
+[cs45aa18@mc-redhat01 ~]$ history |tail
+  125  cd week-3
+  126  cd week3
+  127  cd lec-3
+  128  ls -a
+  129  ls -al
+  130  exit
+  131  cd ../..
+  132  cd ..
+  133  umask
+  134  history |tail
+[cs45aa18@mc-redhat01 ~]$ !133
+umask
+0002
+[cs45aa18@mc-redhat01 ~]$ history |tail -15
+  122  pwd
+  123  ls
+  124  cd homework/
+  125  cd week-3
+  126  cd week3
+  127  cd lec-3
+  128  ls -a
+  129  ls -al
+  130  exit
+  131  cd ../..
+  132  cd ..
+  133  umask
+  134  history |tail
+  135  umask
+  136  history |tail -15
+[cs45aa18@mc-redhat01 ~]$ cd homework/week3/lec-3/
+[cs45aa18@mc-redhat01 lec-3]$ mkdir dirx
+[cs45aa18@mc-redhat01 lec-3]$ ls -ld dirx/
+drwxrwxr-x. 2 cs45aa18 cs45aa18 6 Sep 19 14:57 [0m[01;34mdirx/[0m
+[cs45aa18@mc-redhat01 lec-3]$ touch xfile
+[cs45aa18@mc-redhat01 lec-3]$ ls -l xfile 
+-rw-rw-r--. 1 cs45aa18 cs45aa18 0 Sep 19 14:58 xfile
+[cs45aa18@mc-redhat01 lec-3]$ cat xfile
+[cs45aa18@mc-redhat01 lec-3]$ echo $?
+0
+[cs45aa18@mc-redhat01 lec-3]$ man cat
+7[?47hCAT(1)                               User Commands                               CAT(1)[m
+[m
+[1mNAME[0m[m
+       cat - concatenate files and print on the standard output[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcat[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Concatenate FILE(s), or standard input, to standard output.[m
+[m
+       [1m-A[0m, [1m--show-all[0m[m
+              equivalent to [1m-vET[0m[m
+[m
+       [1m-b[0m, [1m--number-nonblank[0m[m
+              number nonempty output lines, overrides [1m-n[0m[m
+[m
+       [1m-e[0m     equivalent to [1m-vE[0m[m
+[m
+       [1m-E[0m, [1m--show-ends[0m[m
+              display $ at end of each line[m
+[m
+       [1m-n[0m, [1m--number[0m[m
+[7m Manual page cat(1) line 1 (press h for help or q to quit)[27m[K[K[2J[?47l8[cs45aa18@mc-redhat01 lec-3]$ cat impostor
+cat: impostor: No such file or directory
+[cs45aa18@mc-redhat01 lec-3]$ cat impostor[5Pman catecho $?
+1
+[cs45aa18@mc-redhat01 lec-3]$ qwdfth
+bash: qwdfth: command not found...
+[cs45aa18@mc-redhat01 lec-3]$ qwdfthecho $?
+127
+[cs45aa18@mc-redhat01 lec-3]$ test -e xfile 
+[cs45aa18@mc-redhat01 lec-3]$ test -e xfile [7Pecho $?
+0
+[cs45aa18@mc-redhat01 lec-3]$ test -e xfile && echo "Test success"
+Test success
+[cs45aa18@mc-redhat01 lec-3]$ test -e xfile && echo "Test success"[C[C[C[1P[1P[1P[1P[1P[1@f[1@a[1@k[1@e[1@f[1@i[1@l[1@e
+[cs45aa18@mc-redhat01 lec-3]$ test -e fakefile && echo "Test success"[3Px[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho $?[K
+1
+[cs45aa18@mc-redhat01 lec-3]$ test 5 --[Klet [K[K[Kt 8 && echo "True"
+True
+[cs45aa18@mc-redhat01 lec-3]$ cat eetc[K[K[Ktc/group
+cat: etc/group: No such file or directory
+[cs45aa18@mc-redhat01 lec-3]$ cat etc/groups
+cat: etc/groups: No such file or directory
+[cs45aa18@mc-redhat01 lec-3]$ grep /etc/group
+
+
+
+[cs45aa18@mc-redhat01 lec-3]$ grep /etc/group[1Pcat etc/groups/etc/groups
+cat: /etc/groups: No such file or directory
+[cs45aa18@mc-redhat01 lec-3]$ cat /etc/groupsgrep /etc/group[1Pcat etc/groups[K/etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ply
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:amandabackup
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+ods:x:999:
+pegasus:x:65:
+input:x:998:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:997:
+apache:x:48:
+printadmin:x:996:
+libstoragemgmt:x:995:
+colord:x:994:
+rpc:x:32:
+saned:x:993:
+dip:x:40:
+cgred:x:992:
+ssh_keys:x:991:
+saslauth:x:76:
+abrt:x:173:
+rtkit:x:172:
+pulse-access:x:990:
+pulse-rt:x:989:
+pulse:x:171:
+radvd:x:75:
+chrony:x:988:
+kvm:x:36:qemu
+qemu:x:107:
+ntp:x:38:
+unbound:x:987:
+gluster:x:986:
+tss:x:59:
+libvirt:x:985:
+sssd:x:984:
+geoclue:x:983:
+cockpit-ws:x:982:
+usbmuxd:x:113:
+setroubleshoot:x:981:
+dirsrv:x:389:
+hsqldb:x:96:
+tomcat:x:53:
+pkiuser:x:17:
+gdm:x:42:
+rpcuser:x:29:
+nfsnobody:x:65534:
+kdcproxy:x:388:
+ipaapi:x:387:apache
+gnome-initial-setup:x:386:
+pcp:x:385:
+sshd:x:74:
+slocate:x:21:
+avahi:x:70:
+postdrop:x:90:
+postfix:x:89:
+oprofile:x:16:
+tcpdump:x:72:
+ply:x:1000:ply
+cs45aa01:x:1001:
+cs45aa02:x:1002:
+cs45aa03:x:1003:
+cs45aa04:x:1004:
+cs45aa05:x:1005:
+cs45aa06:x:1006:
+cs45aa07:x:1007:
+cs45aa08:x:1008:
+cs45aa09:x:1009:
+cs45aa10:x:1010:
+cs45aa11:x:1011:
+cs45aa12:x:1012:
+cs45aa13:x:1013:
+cs45aa14:x:1014:
+cs45aa15:x:1015:
+cs45aa16:x:1016:
+cs45aa17:x:1017:
+cs45aa18:x:1018:
+cs45aa19:x:1019:
+cs45aa20:x:1020:
+cs45aa21:x:1021:
+cs45aa22:x:1022:
+cs45aa23:x:1023:
+cs45aa24:x:1024:
+cs45aa25:x:1025:
+cs45aa26:x:1026:
+cs45aa27:x:1027:
+cs45aa28:x:1028:
+cs45aa29:x:1029:
+cs45aa30:x:1030:
+cs45aa31:x:1031:
+cs45aa32:x:1032:
+cs45aa33:x:1033:
+cs45aa34:x:1034:
+cs45aa35:x:1035:
+cs45aa36:x:1036:
+cs45aa37:x:1037:
+cs45aa38:x:1038:
+cs45aa39:x:1039:
+cs45aa40:x:1040:
+students:x:1041:
+instructors:x:1042:
+hcampbell:x:1043:
+siah:x:1044:
+mooks:x:1045:
+keith:x:1046:
+mr-tester:x:1047:
+mrs-tester:x:1048:
+cs45:x:1049:hcampbell
+[cs45aa18@mc-redhat01 lec-3]$ cat /etc/groupsgrep /etc/group[1Pcat etc/groupsgrep /etc/groupm/etc/groupr/etc/group /etc/group
+[01;31m[Kmr[m[K-tester:x:1047:
+[01;31m[Kmr[m[Ks-tester:x:1048:
+[cs45aa18@mc-redhat01 lec-3]$ touch tex[Kst.c
+[cs45aa18@mc-redhat01 lec-3]$ vim test.c
+7[?47h[2;1H▽[6n[2;1H  [1;1H[27m[24m[0m[H[J[24;1H"test.c" 0L, 0C[2;1H[1m[34m~                                                                                         [3;1H~                                                                                         [4;1H~                                                                                         [5;1H~                                                                                         [6;1H~                                                                                         [7;1H~                                                                                         [8;1H~                                                                                         [9;1H~                                                                                         [10;1H~                                                                                         [11;1H~                                                                                         [12;1H~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [0m[24;73H0,0-1[9CAll[1;1H[24;1H[1m[37m[41mE348: No string under cursor[0m[24;73H[K[24;73H0,0-1[9CAll[1;1H[24;1H[1m-- INSERT --[0m[24;13H[K[24;73H0,1[11CAll[1;1Hn[24;73H1,2[1;2Hc[24;75H3[1;3Hl[24;75H4[1;4Hu[24;75H5[1;5Hd[24;75H6[1;6He[24;75H7[1;7H<[24;75H8[1;8Hs[24;75H9[1;9Ht[24;75H10[1;10Hd[24;76H1[1;11Hi[24;76H2[1;12Ho[24;76H3[1;13H.[24;76H4[1;14Hh[24;76H5[1;15H>[24;76H6[1;16H[2;1H[K[24;73H2,1 [2;1H[1m[34m~                                                                                         [0m[24;73H1,16[1;16H[1;15H[K[24;76H5[1;15H[1;14H[K[24;76H4[1;14H[1;13H[K[24;76H3[1;13H[1;12H[K[24;76H2[1;12H[1;11H[K[24;76H1[1;11H[1;10H[K[24;76H0[1;10H[1;9H[K[24;75H9 [1;9H[1;8H[K[24;75H8[1;8H[1;7H[K[24;75H7[1;7H[1;6H[K[24;75H6[1;6H[1;5H[K[24;75H5[1;5H[1;4H[K[24;75H4[1;4H[1;3H[K[24;75H3[1;3H[1;2H[K[24;75H2[1;2H[1;1H[K[24;75H1[1;1H#[24;75H2[1;2Hi[24;75H3[1;3Hn[24;75H4[1;4Hc[24;75H5[1;5Hl[24;75H6[1;6Hu[24;75H7[1;7He[24;75H8[1;8H[1;7H[K[24;75H7[1;7Hd[24;75H8[1;8He[24;75H9[1;9H[1m[34m#include<[0m[24;75H10[1;10Hs[24;76H1[1;11Ht[24;76H2[1;12Hd[24;76H3[1;13Hi[24;76H4[1;14Ho[24;76H5[1;15H.[24;76H6[1;16Hh[24;76H7[1;17H[1;9H[1m[35m<stdio.h>[0m[24;76H8[1;18H[2;1H[K[24;73H2,1 [2;1H[3;1H[K[24;73H3[3;1Hm[24;75H2[3;2Ha[24;75H3[3;3Hi[24;75H4[3;4Hn[24;75H5[3;5H([24;75H6[3;6H)[46m()[0m[24;75H7[3;7H()[24;75H8[3;8H{[24;75H9[3;9H[4;1H[K[24;73H4,1[4;1H[24;75H2-9[4;9H[24;75H1  [4;1H[24;75H2-9[4;9Hp[24;75H3-10[4;10Hr[24;75H4-11[4;11Hi[24;75H5-12[4;12Hn[24;75H6-13[4;13Ht[24;75H7-14[4;14Hf[24;75H8-15[4;15H([24;75H9-16[4;16H[1m[35m"[0m[24;75H10-17[4;17H[1m[35mH[0m[24;76H1-18[4;18H[1m[35me[0m[24;76H2-19[4;19H[1m[35ml[0m[24;76H3-20[4;20H[1m[35ml[0m[24;76H4-21[4;21H[1m[35mo[0m[24;76H5-22[4;22H[1m[35m [0m[24;76H6-23[4;23H[1m[35mW[0m[24;76H7-24[4;24H[1m[35mo[0m[24;76H8-25[4;25H[1m[35mr[0m[24;76H9-26[4;26H[1m[35ml[0m[24;75H20-27[4;27H[1m[35md[0m[24;76H1-28[4;28H[1m[35m"[0m[24;76H2-29[4;29H)[4;15H[46m([13C)[0m[24;76H3-30[4;30H;[4;15H([13C)[24;76H4-31[4;31H[5;1H[K[24;73H5,1    [5;1H[24;75H2-9[5;9Hr[24;75H3-10[5;10He[24;75H4-11[5;11Ht[24;75H5-12[5;12Hu[24;75H6-13[5;13Hr[24;75H7-14[5;14H[1m[33mreturn[0m[24;75H8-15[5;15H[24;75H9-16[5;16H[1m[35m0[0m[24;75H10-17[5;17H;[24;76H1-18[5;18H[6;1H[K[24;73H6,1    [6;1H}[3;8H[46m{
+
+
+}[0m[24;75H2[6;2H:[3;8H{
+
+
+}[24;75H3[6;3H[6;2H[K[3;8H[46m{
+
+
+}[0m[24;75H2[6;2H[24;1H[K[6;1H[24;73H6,1[11CAll[6;1H[24;73H[K[24;1H:x"test.c" 6L, 65C written
+[2J[?47l8[cs45aa18@mc-redhat01 lec-3]$ more test.c
+#include<stdio.h>
+
+main() {
+	printf("Hello World");
+	return 0;
+}
+[cs45aa18@mc-redhat01 lec-3]$ gcc test.c -o testrun
+[cs45aa18@mc-redhat01 lec-3]$ gcc test.c -o testrun[Kls -l testrun
+-rwxrwxr-x. 1 cs45aa18 cs45aa18 8360 Sep 19 15:34 [0m[01;32mtestrun[0m
+[cs45aa18@mc-redhat01 lec-3]$ ls -l testrun[Ktestrun
+bash: testrun: command not found...
+[cs45aa18@mc-redhat01 lec-3]$ ./testrun
+Hello World[cs45aa18@mc-redhat01 lec-3]$ vim [K[K[K[Kls
+[0m[01;34mdirx[0m  test.c  [01;32mtestrun[0m  xfile
+[cs45aa18@mc-redhat01 lec-3]$ ls -l xfile 
+-rw-rw-r--. 1 cs45aa18 cs45aa18 0 Sep 19 14:58 xfile
+[cs45aa18@mc-redhat01 lec-3]$ umask 033
+[cs45aa18@mc-redhat01 lec-3]$ mkdir zdir
+[cs45aa18@mc-redhat01 lec-3]$ ls -ld zdir/
+drwxr--r--. 2 cs45aa18 cs45aa18 6 Sep 19 20:46 [0m[01;34mzdir/[0m
+[cs45aa18@mc-redhat01 lec-3]$ groups me[Kr-tester
+mr-tester : mr-tester
+[cs45aa18@mc-redhat01 lec-3]$ grep mr-tester /etc/group
+[01;31m[Kmr-tester[m[K:x:1047:
+[cs45aa18@mc-redhat01 lec-3]$ id -a mr-tester
+uid=1045(mr-tester) gid=1047(mr-tester) groups=1047(mr-tester)
+[cs45aa18@mc-redhat01 lec-3]$ newgrp - cs45
+Password: 
+newgrp: failed to crypt password with previous salt: Invalid argument
+[cs45aa18@mc-redhat01 lec-3]$ newgrp - cs45
+Password: 
+newgrp: failed to crypt password with previous salt: Invalid argument
+[cs45aa18@mc-redhat01 lec-3]$ touch gxfile
+[cs45aa18@mc-redhat01 lec-3]$ ls -l gxfile 
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:10 gxfile
+[cs45aa18@mc-redhat01 lec-3]$ gh[K[Kchgrp wheel gxfile 
+chgrp: changing group of ‘gxfile’: Operation not permitted
+[cs45aa18@mc-redhat01 lec-3]$ touch mr-tfile
+[cs45aa18@mc-redhat01 lec-3]$ ls -l mr-tfile 
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:11 mr-tfile
+[cs45aa18@mc-redhat01 lec-3]$ chgrp cs45 mr-tfile
+chgrp: changing group of ‘mr-tfile’: Operation not permitted
+[cs45aa18@mc-redhat01 lec-3]$ test -f mr-tfile 
+[cs45aa18@mc-redhat01 lec-3]$ echo $
+$
+[cs45aa18@mc-redhat01 lec-3]$ echo $?
+0
+[cs45aa18@mc-redhat01 lec-3]$ echo $?[Ktest -f mr-tfile chgrp cs45 mr-tfile[2Ptest -f mr-tfile 
+[cs45aa18@mc-redhat01 lec-3]$ test -f mr-tfile [10Pecho $?
+0
+[cs45aa18@mc-redhat01 lec-3]$ mkdir mr-dir
+[cs45aa18@mc-redhat01 lec-3]$ ls -ld mr-dir
+drwxr--r--. 2 cs45aa18 cs45aa18 6 Sep 19 22:12 [0m[01;34mmr-dir[0m
+[cs45aa18@mc-redhat01 lec-3]$ test -d mr-dir/
+[cs45aa18@mc-redhat01 lec-3]$ test -d mr-dir/[2Pls -ld mr-dir[1Pmkdir[C[C[C[C[C[C[C[5Pecho $?test -f mr-tfile [10Pecho $?
+0
+[cs45aa18@mc-redhat01 lec-3]$ mkdir permteest[K[K[Kst
+[cs45aa18@mc-redhat01 lec-3]$ cd permtest/
+[cs45aa18@mc-redhat01 permtest]$ touch feedback1 feedback 2 feedback 3[K[K[Kk3[1P
+[cs45aa18@mc-redhat01 permtest]$ ls -lh
+total 0
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:13 feedback1
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:13 feedback2
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:13 feedback3
+[cs45aa18@mc-redhat01 permtest]$ vim feedback1
+7[?47h[2;1H▽[6n[2;1H  [1;1H[27m[24m[0m[H[J[24;1H"feedback1" 0L, 0C[2;1H[1m[34m~                                                                                         [3;1H~                                                                                         [4;1H~                                                                                         [5;1H~                                                                                         [6;1H~                                                                                         [7;1H~                                                                                         [8;1H~                                                                                         [9;1H~                                                                                         [10;1H~                                                                                         [11;1H~                                                                                         [12;1H~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [0m[24;73H0,0-1[9CAll[1;1H[24;1H[1m-- INSERT --[0m[24;13H[K[24;73H0,1[11CAll[1;1He[24;73H1,2[1;2Hc[24;75H3[1;3Hh[24;75H4[1;4Ho[24;75H5[1;5H[24;75H6[1;6H"[24;75H7[1;7HI[24;75H8[1;8H[24;75H9[1;9Ha[24;75H10[1;10Hm[24;76H1[1;11H[24;76H2[1;12H:[24;76H3[1;13H[24;76H4[1;14H$[24;76H5[1;15H0[24;76H6[1;16H"[24;76H7[1;17H[2;1H[K[24;73H2,1 [2;1He[24;75H2[2;2Hc[24;75H3[2;3Hh[24;75H4[2;4Ho[24;75H5[2;5H[24;75H6[2;6H"[24;75H7[2;7HP[24;75H8[2;8Hr[24;75H9[2;9Ha[24;75H10[2;10Hc[24;76H1[2;11Hi[24;76H2[2;12H[2;11H[K[24;76H1[2;11Ht[24;76H2[2;12Hi[24;76H3[2;13Hc[24;76H4[2;14He[24;76H5[2;15H[24;76H6[2;16Hh[24;76H7[2;17Ha[24;76H8[2;18Hr[24;76H9[2;19Hd[24;75H20[2;20He[24;76H1[2;21Hr[24;76H2[2;22H![24;76H3[2;23H[24;76H4[2;24H:[24;76H5[2;25H)[24;76H6[2;26H"[24;76H7[2;27H[24;1H[K[2;26H[24;73H2,26[10CAll[2;26H[24;73H[K[24;1H:x"feedback1" 2L, 44C written
+[2J[?47l8[cs45aa18@mc-redhat01 permtest]$ chmod +x feedback1
+[cs45aa18@mc-redhat01 permtest]$ ls -lh
+total 4.0K
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [0m[01;32mfeedback1[0m
+-rw-r--r--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rw-r--r--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback3
+[cs45aa18@mc-redhat01 permtest]$ chmod u=rw-,g=r--,o=--- feedback2
+[cs45aa18@mc-redhat01 permtest]$ chmod u=rw-,g=r--,o=--- feedback2ls -lh[K
+total 4.0K
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [0m[01;32mfeedback1[0m
+-rw-r-----. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rw-r--r--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback3
+[cs45aa18@mc-redhat01 permtest]$ ls -lhchmod u=rw-,g=r--,o=--- feedback2ls -lh[K[Kchmod o[Ku=r-- d[Kfeedback2
+[cs45aa18@mc-redhat01 permtest]$ chmod u=r-- feedback2ls -lh[K
+total 4.0K
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [0m[01;32mfeedback1[0m
+-r--r-----. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rw-r--r--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback3
+[cs45aa18@mc-redhat01 permtest]$ chmod 753 feedback3
+[cs45aa18@mc-redhat01 permtest]$ chmod 753 feedback3ls -lh[K
+total 4.0K
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [0m[01;32mfeedback1[0m
+-r--r-----. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rwxr-x-wx. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 [01;32mfeedback3[0m
+[cs45aa18@mc-redhat01 permtest]$ ls -lhchmod 753 feedback3[1@4[C[1Pfeedback3[1Pfeedback3 feedback3
+[cs45aa18@mc-redhat01 permtest]$ chmod 754 feedback3ls -lh[K
+total 4.0K
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [0m[01;32mfeedback1[0m
+-r--r-----. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rwxr-xr--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 [01;32mfeedback3[0m
+[cs45aa18@mc-redhat01 permtest]$ mkdir dir-tester
+[cs45aa18@mc-redhat01 permtest]$ cd dir-tester/
+[cs45aa18@mc-redhat01 dir-tester]$ mkdir dir-test2
+[cs45aa18@mc-redhat01 dir-tester]$ touch dir-tester/dir-test2/tester-file{1..4}
+touch: cannot touch ‘dir-tester/dir-test2/tester-file1’: No such file or directory
+touch: cannot touch ‘dir-tester/dir-test2/tester-file2’: No such file or directory
+touch: cannot touch ‘dir-tester/dir-test2/tester-file3’: No such file or directory
+touch: cannot touch ‘dir-tester/dir-test2/tester-file4’: No such file or directory
+[cs45aa18@mc-redhat01 dir-tester]$ touch dir-tester/dir-test2/tester-file{1..4}[C[1Ptester-file{1..4}[1Ptester-file{1..4}[1Pester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Pester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Pester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Pester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}[1Ptester-file{1..4}
+[cs45aa18@mc-redhat01 dir-tester]$ ls
+[0m[01;34mdir-test2[0m  tester-file1  tester-file2  tester-file3  tester-file4
+[cs45aa18@mc-redhat01 dir-tester]$ rm tester [K-file{1...4}[C[1P4}
+[cs45aa18@mc-redhat01 dir-tester]$ ls
+[0m[01;34mdir-test2[0m
+[cs45aa18@mc-redhat01 dir-tester]$ cd dir-test2/
+[cs45aa18@mc-redhat01 dir-test2]$ cd dir-test2/ls[Krm tester-file{1..4}ls[Ktouch tester-file{1..4}
+[cs45aa18@mc-redhat01 dir-test2]$ ls
+tester-file1  tester-file2  tester-file3  tester-file4
+[cs45aa18@mc-redhat01 dir-test2]$ ls -lR dir-tester
+ls: cannot access dir-tester: No such file or directory
+[cs45aa18@mc-redhat01 dir-test2]$ cd ..
+[cs45aa18@mc-redhat01 dir-tester]$ cd ..ls -lR dir-tester
+ls: cannot access dir-tester: No such file or directory
+[cs45aa18@mc-redhat01 dir-tester]$ ls -lR dir-tester[1@d
+ls: cannot access dir-tester: No such file or directory
+[cs45aa18@mc-redhat01 dir-tester]$ cd ..
+[cs45aa18@mc-redhat01 permtest]$ cd ..ls -ldR dir-tester[1P[C[C[C[C[C[C[C[C[C[C[C[C
+dir-tester:
+total 0
+drwxr--r--. 2 cs45aa18 cs45aa18 86 Sep 19 22:53 [0m[01;34mdir-test2[0m
+
+dir-tester/dir-test2:
+total 0
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:53 tester-file1
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:53 tester-file2
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:53 tester-file3
+-rw-r--r--. 1 cs45aa18 cs45aa18 0 Sep 19 22:53 tester-file4
+[cs45aa18@mc-redhat01 permtest]$ chmod -R 600 dir-tester
+chmod: cannot access ‘dir-tester/dir-test2’: Permission denied
+[cs45aa18@mc-redhat01 permtest]$ ld [Ks[K[Ks -lR
+.:
+total 4
+drw-------. 3 cs45aa18 cs45aa18 23 Sep 19 22:53 [0m[01;34mdir-tester[0m
+-rwxr--r--. 1 cs45aa18 cs45aa18 44 Sep 19 22:14 [01;32mfeedback1[0m
+-r--r-----. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 feedback2
+-rwxr-xr--. 1 cs45aa18 cs45aa18  0 Sep 19 22:13 [01;32mfeedback3[0m
+
+./dir-tester:
+ls: cannot access ./dir-tester/dir-test2: Permission denied
+total 0
+d????????? ? ? ? ?            ? [01;34mdir-test2[0m
+ls: cannot open directory ./dir-tester/dir-test2: Permission denied
+[cs45aa18@mc-redhat01 permtest]$ exit
+exit
+
+Script done on Sat 19 Sep 2020 11:21:15 PM EDT

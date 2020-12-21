@@ -1,0 +1,4 @@
+#!/bin/bash
+echo hello fernaz
+echo `date`
+echo Goodbye
