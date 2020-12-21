@@ -1,0 +1,41 @@
+Write an expression to sort the months file in numeric order.
+sort -n months
+
+Write an expression using the sort command to merge the months and numbers file into one file called ‘monbrs’
+cat months numbers > monbrs
+
+Use the grep command to match all lines in the /etc/passwd file that begins with the letter ‘r’. (Be specific in using the beginning of line or end of line characters and single quotes around your expression.
+grep '^r' /etc/passwd
+
+Write a grep expression to count the numbers of lines that match your search in #4 above.
+grep '^r' /etc/passwd | wc -l
+
+Write a grep expression to give you all lines in the /etc/passwd file except those that have the string ‘cs45’.
+grep -v 'cs45' /etc/passwd
+
+Write a grep expression to search for all lines in the months file that ends with the letter ‘y’.
+grep 'y$' months
+
+Write a grep expression to match all lines in the file that have the string ‘root’ or the string ‘ly’ or the string ‘body’. You should make sure you include options that match uppercase or lowercase
+egrep '[Rr][Oo][Oo][Tt]|[Ll][Yy]|[Bb][Oo][Dd][Yy]' file
+
+Write a command to show all special characters like the ‘TAB’ or other in the ‘regtxt’ file.
+cat -t regtxt
+
+Write a grep command to pull out all the phone numbers from the ‘regtxt’ file.
+grep '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' regtxt
+
+What line will be pulled out of the regtxt file with the following grep expression.
+aaaaaAA
+
+Use the ‘sed’ command to mask the last 4 digits of all Social Security Numbers(SSN)  in the regtxt2 file. Note that SSN  begins with 3 digits, has two digits in the middle and ends with 4 digits. You want to replace the last four digits so that a number like this : 223-45-3456   ends up looking like this: 223-45-****
+sed 's/^\([0-9][0-9][0-9]\)-\([0-9][0-9]\)-\([0-9][0-9][0-9][0-9]\)/\1-\2-\*\*\*\*/' regtxt2
+
+In regtxt1, there is a line that has ‘100’ . Write a sed expression to put a  parenthesis around the 100 so that it looks like this: (100).  Hint: Find the pattern in your search , group it in a buffer, and when you replace, put parentheses around your search pattern. Note→ Look at the use of the ampersand character→ &
+sed 's/\(100\)/\(\1\)/' regtxt1
+
+Write a grep expression to match any phone numbers in the file called regtxt2.
+egrep '[0-9]{3}-[0-9]{3}-[0-9]{4}' regtxt2
+
+Write a sed expression to swap the first three digits of any phone number with the last 4 digits that are in regtxt2 file. You are swapping the area code with the last 4 digits of the phone number.
+sed 's/\([0-9]\{3\}\)-\([0-9]\{3\}\)-\([0-9]\{4\}\)/\3-\2-\1/' regtxt2

@@ -1,0 +1,141 @@
+# check if linked filed is a symbolic link
+echo -n "Enter file name: "
+read filename
+if [[ -L "$filename" ]]
+then
+        echo "$filename is a symbolic link"
+        ofile=`ls -l $filename |awk '{print $11}'`
+        echo "The original file for $filename is $ofile"
+        fsize=`ls -l $ofile |awk '{print $5}'`
+        echo "The size of $ofile is $fsize"
+        fown=`ls -l $ofile |awk '{print $3}'`
+        echo "The $ofile is owned by $fown"
+else
+        echo "$filename is not a symbolic link"
+fi
+
+
+
+
+
+Script analysis:
+#!/bin/bash
+
+# Script name: myargs
+
+#
+
+# Date:
+
+# Name:
+
+ 
+
+# Script to test command line arguments
+
+if [ $# == 0 ] ; then
+
+   echo "Usage:  $(basename $0)  arg1 arg2 ... argn" \
+
+   1>&2
+
+   exit 1
+
+fi
+
+echo "The name of this script is $0 ."
+
+echo "The arguments are $* "
+
+echo "The first argument is $1"
+
+echo "The second argument is $2"
+
+echo "The number of arguments is $#"
+
+previous_args=$*
+
+set niel khail nobo
+
+echo "All the positional parameters are $*"
+
+echo "The number of positional parameters is $#"
+
+echo $previous_args
+
+set --
+
+echo "Current args after -- are :  $*"
+
+set $previous_args
+
+echo $*
+
+ 
+
+-----------------------------------------------
+
+ 
+
+3. Copy the script and run it on your system and give a detail comment of what each line is doing.
+
+ 
+
+------------------------------------------------
+
+#!/bin/bash
+
+# Scriptname: tellage
+
+#
+
+read -p "How old are you? "
+#prompts how old are you and asks for input
+age=$REPLY
+#input goes into variable age
+ 
+
+if (( age < 0 || age > 120 ))
+#set bounds for ages to filter out unrealistic responses
+
+then
+
+      echo "You are not a real person! "
+
+      exit 1 
+#give user invalid age message and exits with code 1
+fi
+
+ 
+
+if (( age >= 0 && age < 13 ))
+#if the age is more than or equal to 0 and under 13
+then
+
+      echo "You still have some of the best years of your life ahead."
+#print message
+elif (( age > 12 && age < 20 ))
+#if age is more than 12 and less than 20
+then
+
+      echo "Important years to learn"
+#print message
+elif (( age >= 20 && age < 30 ))
+#if age is 20 or greater and less than 30
+then
+
+      echo "Time to find a potential mate!!"
+#print message
+elif (( age >= 30 && age < 40 ))
+#if age is 30 or greater and less than 40
+then
+
+      echo "You are probably changing diapers"
+#print message
+else
+
+      echo "Sorry I asked"
+#if none of the cases match age, then print this message
+fi
+
+-----------------------------------------

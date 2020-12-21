@@ -1,0 +1,103 @@
+> What date and time did hcampbell log into the system, and where did they come from?
+
+hcampbell pts/13       2020-09-05 14:37 (c-73-41-184-155.hsd1.ca.comcast.net)
+
+> What option to the hostname command will show you the ipdresses associated with the hostname?
+
+-i
+
+> What is the hostname -f show you?
+
+long host name (FQDN)
+
+> What man page does it take you to by default?
+
+PRINTF(1)
+
+> What is curl?
+
+curl transfers a url
+
+> What is it used for?
+
+	" curl  is  a  tool to transfer data from or to a server, using one of the supported protocols (DICT, FILE, FTP,
+       FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP,  SMTPS,  TELNET
+       and TFTP).  The command is designed to work without user interaction.
+
+       curl  offers  a  busload  of useful tricks like proxy support, user authentication, FTP upload, HTTP post, SSL
+       connections, cookies, file transfer resume, Metalink, and more. As you will see below, the number of  features
+       will make your head spin!"
+
+> What is wget?
+
+non-interactive network downloader
+
+> What is it used for?
+
+	"GNU Wget is a free utility for non-interactive download of files from the Web.  It supports HTTP, HTTPS, and
+       FTP protocols, as well as retrieval through HTTP proxies."
+
+>  See what directory you end up in.  $ pwd
+
+/home/mr-tester
+
+> What does the whoami command show?   $ whoami
+
+mr-tester
+
+>. What does the 'who am i' command show?  $ who am i
+
+cs45aa18 pts/2        2020-09-05 13:33 (99-119-199-17.lightspeed.sntcca.sbcglobal.net)
+
+>.  What is the difference?
+
+one is who you currently are actingas, one is who your base user is 
+
+ > What is the difference between the su -  mr-tester and the su mr-tester(without a dash)
+
+Path does not change for the one with no dash
+
+> Write a date command to print 09-05-2020
+
+$ date +%m-%d-%y
+
+> What type of command is the 'ls' command?
+
+ls is aliased to `ls --color=auto'
+
+> How much space is being used by each file system on this node?     
+
+Filesystem             Size  Used Avail Use% Mounted on
+devtmpfs               2.9G     0  2.9G   0% /dev
+tmpfs                  2.9G     0  2.9G   0% /dev/shm
+tmpfs                  2.9G   99M  2.8G   4% /run
+tmpfs                  2.9G     0  2.9G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root   50G  8.8G   42G  18% /
+/dev/mapper/rhel-home  243G   41M  243G   1% /home
+/dev/sda1             1014M  236M  779M  24% /boot
+tmpfs                  581M   12K  581M   1% /run/user/42
+tmpfs                  581M     0  581M   0% /run/user/1010
+tmpfs                  581M     0  581M   0% /run/user/1018
+tmpfs                  581M     0  581M   0% /run/user/1007
+tmpfs                  581M     0  581M   0% /run/user/1016
+tmpfs                  581M     0  581M   0% /run/user/1005
+tmpfs                  581M     0  581M   0% /run/user/1017
+tmpfs                  581M     0  581M   0% /run/user/1028
+tmpfs                  581M     0  581M   0% /run/user/1003
+tmpfs                  581M     0  581M   0% /run/user/1041
+tmpfs                  581M     0  581M   0% /run/user/1015
+tmpfs                  581M     0  581M   0% /run/user/1040
+tmpfs                  581M     0  581M   0% /run/user/1019
+tmpfs                  581M     0  581M   0% /run/user/1021
+
+> How much space is being used by the files and directories  on the disk?
+
+0       ./.mozilla/extensions
+0       ./.mozilla/plugins
+0       ./.mozilla
+4       ./.cache/abrt
+4       ./.cache
+0       ./.config/abrt
+0       ./.config
+20      .
+
