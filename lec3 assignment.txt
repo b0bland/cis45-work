@@ -1,0 +1,50 @@
+1. A hard link is a separate cirtual file that contains information about the original file, and the location of that file. 
+
+2. A symbolic link is a physical file that points to another file somewhere eelse in the virtual directory structure. 
+
+3. Three characteristics of hard links are: hard linked files have the same inode number, file size is identical between the two files, and the link count will he updated to show that they are connected to each other.
+
+4. Three characteristics of a symbolic link are: linked files do not share the same content, can link files between separate physical mediums, and have different inodes.
+
+5. History command gives you the eusage history of commands. 
+
+6. Tail displays the last few lines of a file or command.
+
+7. Head displays the first few lines of a file or command. 
+
+8. history | tail -n 14
+
+9. Sorting data will rearrange data according to standard sorting rules. Searching for data is looking for a specific item in a seet of data. 
+
+10. A process in Linux is a running program. 
+
+11. The ps command.
+
+12. kill 1325
+
+13. Compressing files is taking a large file and compressing it to a smaller size. 
+
+14. Copying is taking a file and making a duplicate of it. Moving a file is like 'cut and paste'; the file is moved from one location to another, no duplication occurs. 
+
+15. Archiving a file or data is basically backing up the data and storing it away for safekeeping. 
+
+
+
+
+
+
+[cs45aa18@mc-redhat01 ~]$ man -k vim
+gvim (1)             - Vi IMproved, a programmers text editor
+gvimdiff (1)         - edit two, three or four versions of a file with Vim and show differences
+gvimtutor (1)        - the Vim tutor
+rvim (1)             - Vi IMproved, a programmers text editor
+vim (1)              - Vi IMproved, a programmers text editor
+vimdiff (1)          - edit two, three or four versions of a file with Vim and show differences
+vimrc (5)            - Vi IMproved, a programmers text editor
+vimrc_event.conf (5) - configuration file for libreport.
+vimtutor (1)         - the Vim tutor
+vimx (1)             - Vi IMproved, a programmers text editor
+
+
+vimrc(5) is basically the manual on how to use vim 
+

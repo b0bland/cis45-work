@@ -1,0 +1,12 @@
+system V and BSD merged to form system V release 4 
+when linux boots, kernel is loaded into memory
+shell is command interpreter 
+echo $SHELL to tell what SHELL you are logged in to
+
+ls -i -l -F -d -h
+@ => Symbolic Link
+/ = Directory
+Green with asterisk * => Executable program
+
+
+bin has utlities/commands
